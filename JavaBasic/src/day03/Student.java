@@ -19,7 +19,7 @@ public class Student {
 //	학생 클래스 객체가 실행 가능한 메소드
 	
 	public static void goSchool() {
-		System.out.println("학교가자!!!!");
+		System.out.println("학교가자!!!!"); // return으로 하면 어떻게 되려나
 	}
 
 	public int calculateSum() {
