@@ -122,6 +122,13 @@ public class ArrayUtil {
 	} // remove end
 	
 	
+	public static StudentVO [] set(StudentVO[] array, StudentVO s) {
+		int index = indexOf(s, array);
+		array[index] = s;
+		return array;
+	} //set end
+	
+	
 
 
 } // class end

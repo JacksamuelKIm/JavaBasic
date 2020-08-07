@@ -73,10 +73,12 @@ public class Student {
 		//1. obj가 Student 객체인지 확인
 		//   이거는 instanceof라는 예약어를 통해서 한다.
 		if(obj instanceof Student) {
+			/// instance of 를 통과는 했지만 아직 엄밀하게 Student인 것은 아니다.
 			//이 if에 들어왔다는 것은 obj가 Student의 객체란 의미가 된다.
 			//다른 클래스 객체에 Student를 typecasting하면 에러가 나지만
 			//Student클래스 객체라면 Student를 typecasting할 수 있다.
 			Student s = (Student) obj;
+			// ((Student) obj).age; 통과는 했지만 여전히 부족. Student이지만 age도 없음. 따라서 casting 필요 
 			
 			// 이 메소드를 실행하는 Student객체의 필드와
 			// obj에 Student를 명시적 형변환한 s의 필드를 

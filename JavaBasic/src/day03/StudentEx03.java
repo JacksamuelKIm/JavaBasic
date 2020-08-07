@@ -25,8 +25,48 @@ public class StudentEx03 {
 				// 1. 학생목록이 꽉 찼습니다. 메세지 출력
 				// 2. 제일 오래된 학생을 제거하고, 한 칸씩 땡기고
 				//    가장 마지막 칸에 새로운 학생 입력
+				// 3. 만약 꽉 차면 자동으로 늘려준다.
+				// 1- > 2 -> 3을 오늘 한 번 만들어보자.
+				int index = -1; 
+				// 인덱스가 -1인 이유: 불가능한게 100프로인 위치번호 중에서 가장 큰 수이다.
+				// 				
+				for(int i = 0; i <studentArray.length; i++) {
+					if(studentArray[i] == null ) {
+						index = i;
+						break; // for든 if이든 index에 i값을 부여해주고 끝. 바로 break.
+					}					
+				} // for end
+				if(index != -1) {
+					//빈 칸이 존재하므로
+					//입력을 받아서  studentArray[index]에 할당
+					Student s = new Student();
+					System.out.print("이름: ");
+					scanner.nextLine();
+					s.setName(scanner.nextLine());
+					
+					System.out.print("나이: ");
+					s.setAge(scanner.nextInt());
+					
+					System.out.print("국어: ");
+					s.setKorean(scanner.nextInt());
+					
+					System.out.print("영어: ");
+					s.setEnglish(scanner.nextInt());
+					
+					System.out.print("수학: ");
+					s.setMath(scanner.nextInt());
+					
+					studentArray[index] = s;
+					
+				} else {
+						System.out.println("배열이 꽉 찼습니다");
+				}				
 			}else if(choice == 2) {
-				
+				for(int i = 0; i < studentArray.length; i++) {
+					if(studentArray[i] != null) {
+						System.out.println(studentArray[i]);
+					} 					
+				}//for end
 				
 			}else if(choice == 3) {
 				System.out.println("사용해 주셔서 감사합니다");

@@ -90,7 +90,7 @@ public class StudentViewer {
 		System.out.println(s.getName()+" 학생의 정보");
 		System.out.println("============================");
 		System.out.printf("이름: %s\n", s.getName());
-		System.out.printf("국어: %d점 영어: %d점 수학: %d점\\n", s.getKorean(), s.getEnglish(), s.getMath());
+		System.out.printf("국어: %d점 영어: %d점 수학: %d점\n", s.getKorean(), s.getEnglish(), s.getMath());
 		System.out.printf("총점: %d점 평균: %.2f점\n", controller.calculateSum(s), controller.calculateAverage(s) );
 		System.out.println("============================");
 		System.out.println("1. 수정   2. 삭제  3. 뒤로  ");
@@ -98,7 +98,8 @@ public class StudentViewer {
 		int choice = scanner.nextInt();
 		choice = validateNumberInsert(choice, 1, 3);
 		if (choice == 1) {
-			//수정 메소드 실행			
+			//수정 메소드 실행
+			update(s);
 		}else if (choice ==2) {
 			//삭제 메소드 실행
 			System.out.println("해당 학생의 정보를 정말 삭제하시겠습니까? y/n?");
@@ -108,12 +109,7 @@ public class StudentViewer {
 				//컨트롤러에서 삭제 메소드 실행
 				controller.delete(s);
 				
-			}else {
-				
-				
 			}
-			
-			
 			
 		}else if (choice ==3) {
 			//아무것도 안함 
@@ -121,6 +117,28 @@ public class StudentViewer {
 		
 	}// print end
 			
+	
+	private void update(StudentVO s) {
+		System.out.print("국어 점수: ");
+		s.setKorean(scanner.nextInt());
+		
+		System.out.print("영어 점수: ");
+		s.setEnglish(scanner.nextInt());
+				
+		System.out.print("수학 점수: ");
+		s.setMath(scanner.nextInt());
+		
+		controller.update(s);
+		print(s);
+		
+	} //update end
+	
+	
+	
+	
+	
+	
+	
 	
 	private int validateNumberInsert(int number, int minimum, int maximum) {
 		while(number < minimum || number > maximum) {

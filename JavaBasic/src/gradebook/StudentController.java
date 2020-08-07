@@ -37,6 +37,9 @@ public class StudentController {
 		studentArray = ArrayUtil.remove(studentArray, s);		
 	}
 	
+	public void update(StudentVO s) {
+		studentArray = ArrayUtil.set(studentArray, s);
+	}
 	
 	
 }
