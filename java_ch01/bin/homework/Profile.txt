@@ -1,0 +1,10 @@
+Name: Samuel 
+Age: 105 
+Major: Medicine 
+Job: Lawyer 
+InYear: 2020 
+Course Period: 97 
+FullFunded: false 
+wishSalary: 140000 
+wishRegion: South Australia 
+wishArea: Kernel Development
