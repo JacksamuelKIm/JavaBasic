@@ -14,10 +14,13 @@ public class UpAndDown {
 		r = new Random();
 		int k = r.nextInt(100);
 		choice = "";
+		
 		System.out.println("수를 결정하였습니다. 맞추어 보세요.");
 		System.out.println("0-99");
 		input = scan.nextInt();
+		
 		while (input != k) {
+			for(int i=1; ;i++) {
 			while (input < 0 || input > 99) {
 				System.out.println("버위에 해당하지 않는 수입니다. 다시 입력해주십시오");
 				System.out.print(">>");
@@ -25,17 +28,18 @@ public class UpAndDown {
 			}
 			if (input < k) {
 				System.out.println("더 높게");
-				System.out.print(input + ">>");
+				System.out.print(i + ">>");
 				input = scan.nextInt(); // while의 expression에 있으므로 필요 없음
 			} else if (input > k) {
 				System.out.println("더 낮게");
-				System.out.print(input + ">>");
+				System.out.print(i + ">>");
 				input = scan.nextInt();
 			}
 
 			if (input == k) {
 				System.out.println("맞았습니다.");
 				System.out.print("다시 하시겠습니까?(y/n)>>>");
+				i = 0;
 				choice = scan2.nextLine();
 				while (!(choice.equals("y")) && !(choice.equals("n"))) {
 					System.out.println("잘못 입력하셨습니다. 다시 입력해 주십시오");
@@ -50,7 +54,9 @@ public class UpAndDown {
 					System.out.println("게임을 종료합니다. 감사합니다.");
 					break;
 				}
-			}
+			}	
+			
+			}//for end
 		} // input while end
 	} // randonDraw() end
 
