@@ -1,5 +1,5 @@
 package org.comstudy21.ch02_2;
-
+//written on Aug 12 2020
 import static java.lang.System.in;
 import static java.lang.System.out;
 import java.util.Scanner;

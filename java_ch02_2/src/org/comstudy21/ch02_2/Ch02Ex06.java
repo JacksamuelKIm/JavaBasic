@@ -1,5 +1,5 @@
 package org.comstudy21.ch02_2;
-
+//written on Aug 12 2020
 public class Ch02Ex06 {
 	// (클래스의) 멤버 필드(전역 변수)
 	int a = 3;

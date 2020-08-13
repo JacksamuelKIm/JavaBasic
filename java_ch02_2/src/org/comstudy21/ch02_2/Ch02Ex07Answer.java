@@ -1,3 +1,4 @@
+// written on Aug 13 2020
 package org.comstudy21.ch02_2;
 
 import java.util.Scanner;

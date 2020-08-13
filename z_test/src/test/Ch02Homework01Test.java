@@ -2,7 +2,7 @@ package test;
 import static java.lang.System.out;
 
 import java.util.Scanner;
-
+//written on Aug 12 2020
 public class Ch02Homework01Test {
 	
 	Scanner scanner = new Scanner(System.in);

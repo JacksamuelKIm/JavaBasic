@@ -1,102 +1,108 @@
+// written on Aug 13 2020
 package homework2_2;
-
 import java.util.Scanner;
 
 public class Practices {
-int mean;
+
+	int mean;
 	Scanner scan = new Scanner(System.in); 	Scanner scan2 = new Scanner(System.in); Scanner scan3 = new Scanner(System.in);
 	Scanner scan4 = new Scanner(System.in); Scanner scan5 = new Scanner(System.in); Scanner scan6 = new Scanner(System.in);
 	Scanner scan7 = new Scanner(System.in); Scanner scan8 = new Scanner(System.in); Scanner scan9 = new Scanner(System.in);
 	Scanner scan10 = new Scanner(System.in); Scanner scan11 = new Scanner(System.in); Scanner scan12 = new Scanner(System.in);
 	
+	// ÇÑ ÇÔ¼ö ¾È¿¡¼­ next()¿Í nextLine()À» °°ÀÌ ¾µ ¶§¸¸ Ãæµ¹ ÀÏ¾î³ª´Ï
+	//Scanner °´Ã¼¸¦ µû·Î ¸¸µé¾î ÁÖ¶ó´Â °ÅÁö ±× °æ¿ì ÀÌ¿Ü¿¡´Â ÇÏ³ª¸¸ ¸¸µé¾î ¾²¸é µÈ´Ù. 
+	// ¿ø·¡´Â °¢ ¸Ş¼Òµå ¾È¿¡ scanner ºÒ·¯ÁÖ°í scanner.close()·Î ´İ¾ÆÁà¾ß ÇÔ
+	
+	
 	public Practices() {
-//		exchange();  // 1ë²ˆ
-//		digitComparison();  // 2ë²ˆ
-//		breakingMoney();  // 3ë²ˆ
-//		mean();  / 4ë²ˆ
-//		validateTri(); // 5ë²ˆ
-//		game369(); // 6ë²ˆ
-//		inRect(); //7ë²ˆ
-//		System.out.println(crashRect()); // 8ë²ˆ
-//		inCir(); // 9ë²ˆ
-//		crashCir(); //10ë²ˆ
-//		seasonMonthIf(); // 11-1ë²ˆ
-//		seasonMonthSwitch(); //11-2ë²ˆ
-//		operationsIf(); // 12-1ë²ˆ
-		operationsSwitch(); // 12-2ë²ˆ
+//		exchange();  // 1¹ø
+//		digitComparison();  // 2¹ø
+//		breakingMoney();  // 3¹ø
+//		mean();  / 4¹ø
+//		validateTri(); // 5¹ø
+		game369(); // 6¹ø
+//		inRect(); //7¹ø
+//		System.out.println(crashRect()); // 8¹ø
+//		inCir(); // 9¹ø
+//		crashCir(); //10¹ø
+//		seasonMonthIf(); // 11-1¹ø
+//		seasonMonthSwitch(); //11-2¹ø
+//		operationsIf(); // 12-1¹ø
+//		operationsSwitch(); // 12-2¹ø
 	}
 	
-	// ì‹¤ì „ë¬¸ì œ 1ë²ˆ
+	// ½ÇÀü¹®Á¦ 1¹ø
 	public void exchange() {
-		System.out.print("ì›í™”ë¥¼ ì…ë ¥í•˜ì„¸ìš”(ë‹¨ìœ„ ì›)>>> ");
+		System.out.print("¿øÈ­¸¦ ÀÔ·ÂÇÏ¼¼¿ä(´ÜÀ§ ¿ø)>>> ");
 		int won = scan.nextInt();
 		double dollar = (won / 1100);
-		System.out.println(won + "ì€ $" + dollar + "ì…ë‹ˆë‹¤");
+		System.out.println(won + "Àº $" + dollar + "ÀÔ´Ï´Ù");
 	}
 
-	// ì‹¤ì „ë¬¸ì œ 2ë²ˆ
+	// ½ÇÀü¹®Á¦ 2¹ø
 	public void digitComparison() {
-		System.out.print("2ìë¦¬ìˆ˜ì˜ ì •ìˆ˜ ì…ë ¥ (10~99) >>> ");
+		System.out.print("2ÀÚ¸®¼öÀÇ Á¤¼ö ÀÔ·Â (10~99) >>> ");
 		int num, tens, ones, temp1, temp2;
 		num = scan2.nextInt();
 		tens = num / 10;
 		ones = num % 10;
 		if (tens == ones) {
-			System.out.println("Yes! Great! 10ì˜ ìë¦¬ì™€ 1ì˜ ìë¦¬ê°€ ê°™ìŠµë‹ˆë‹¤"); // ì‹œë¶„ì´ˆ ê³„ì‚° / 2ì§„ë²• / 10ì§„ë²• ë‹¤ ë™ì¼í•œ ë°©ì‹
+			System.out.println("Yes! Great! 10ÀÇ ÀÚ¸®¿Í 1ÀÇ ÀÚ¸®°¡ °°½À´Ï´Ù"); // ½ÃºĞÃÊ °è»ê / 2Áø¹ı / 10Áø¹ı ´Ù µ¿ÀÏÇÑ ¹æ½Ä
 		} else {
-			System.out.println("Yes! Great! 10ì˜ ìë¦¬ì™€ 1ì˜ ìë¦¬ê°€ ê°™ìŠµë‹ˆë‹¤"); // /ì™€ % ì—°ì‚°ìê°€ ê´œíˆ ë§Œë“¤ì–´ì§„ê²Œ ì•„ë‹ˆê² ì§€. ìˆ˜í•™ì„
+			System.out.println("No! 10ÀÇ ÀÚ¸®¿Í 1ÀÇ ÀÚ¸®°¡ °°Áö ¾Ê½À´Ï´Ù"); // /¿Í % ¿¬»êÀÚ°¡ ±¦È÷ ¸¸µé¾îÁø°Ô ¾Æ´Ï°ÚÁö. ¼öÇĞÀÓ
 		}
 
 	}
 
-	// ì‹¤ì „ë¬¸ì œ 3ë²ˆ
+	// ½ÇÀü¹®Á¦ 3¹ø
 	public void breakingMoney() {
-		System.out.print("ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹œì˜¤ >>> ");
+		System.out.print("±İ¾×À» ÀÔ·ÂÇÏ½Ã¿À >>> ");
 
 		int mount = scan3.nextInt();
-		int ì˜¤ë§Œì›ê¶Œ, ë§Œì›ê¶Œ, ì²œì›ê¶Œ, ë°±ì›, ì˜¤ì‹­ì›, ì‹­ì›, ì¼ì›;
+		int ¿À¸¸¿ø±Ç, ¸¸¿ø±Ç, Ãµ¿ø±Ç, ¹é¿ø, ¿À½Ê¿ø, ½Ê¿ø, ÀÏ¿ø;
 
-		ì˜¤ë§Œì›ê¶Œ = mount / 50000;
-		ë§Œì›ê¶Œ = (mount % 50000) / 10000;
-		ì²œì›ê¶Œ = ((mount % 50000) % 10000) / 1000;
-		ë°±ì› = (((mount % 50000) % 10000) % 1000) / 100;
-		ì˜¤ì‹­ì› = ((((mount % 50000) % 10000) % 1000) % 100) / 50;
-		ì‹­ì› = (((((mount % 50000) % 10000) % 1000) % 100) % 50) / 10;
-		ì¼ì› = (((((mount % 50000) % 10000) % 1000) % 100) % 50) % 10;
+		¿À¸¸¿ø±Ç = mount / 50000;
+		¸¸¿ø±Ç = (mount % 50000) / 10000;
+		Ãµ¿ø±Ç = ((mount % 50000) % 10000) / 1000;
+		¹é¿ø = (((mount % 50000) % 10000) % 1000) / 100;
+		¿À½Ê¿ø = ((((mount % 50000) % 10000) % 1000) % 100) / 50;
+		½Ê¿ø = (((((mount % 50000) % 10000) % 1000) % 100) % 50) / 10;
+		ÀÏ¿ø = (((((mount % 50000) % 10000) % 1000) % 100) % 50) % 10;
 
-		System.out.println("ì˜¤ë§Œì›ê¶Œ " + ì˜¤ë§Œì›ê¶Œ + "ë§¤");
-		System.out.println("ë§Œì›ê¶Œ " + ë§Œì›ê¶Œ + "ë§¤");
-		System.out.println("ì²œì›ê¶Œ " + ì²œì›ê¶Œ + "ë§¤");
-		System.out.println("ë°±ì› " + ë°±ì› + "ê°œ");
-		System.out.println("ì˜¤ì‹­ì› " + ì˜¤ì‹­ì› + "ê°œ");
-		System.out.println("ì‹­ì› " + ì‹­ì› + "ê°œ");
-		System.out.println("ì¼ì› " + ì¼ì› + "ê°œ");
+		System.out.println("¿À¸¸¿ø±Ç " + ¿À¸¸¿ø±Ç + "¸Å");
+		System.out.println("¸¸¿ø±Ç " + ¸¸¿ø±Ç + "¸Å");
+		System.out.println("Ãµ¿ø±Ç " + Ãµ¿ø±Ç + "¸Å");
+		System.out.println("¹é¿ø " + ¹é¿ø + "°³");
+		System.out.println("¿À½Ê¿ø " + ¿À½Ê¿ø + "°³");
+		System.out.println("½Ê¿ø " + ½Ê¿ø + "°³");
+		System.out.println("ÀÏ¿ø " + ÀÏ¿ø + "°³");
 
 	}
 
-	// ì‹¤ì „ë¬¸ì œ 4ë²ˆ
+	// ½ÇÀü¹®Á¦ 4¹ø
 	public void mean() {
 		int num1, num2, num3, mean;
-		System.out.print("ì •ìˆ˜ 3ê°œë¥¼ ì…ë ¥ >>> ");
+		System.out.print("Á¤¼ö 3°³¸¦ ÀÔ·Â >>> ");
 		num1 = scan4.nextInt();
 		num2 = scan4.nextInt();
 		num3 = scan4.nextInt();
 
-		// switchë¡œ ëª»í• ë ¤ë‚˜
+		// switch·Î ¸øÇÒ·Á³ª
 
 		while (true) {
 			if ((num1 > num2) && (num2 > num3)) {
-				mean = num2; // ìŒ ì´ ì•ˆì—ì„œ ì´ˆê¸°í™”ëœ ë³€ìˆ˜ëŠ” ë°–ìœ¼ë¡œ ëª»ë‚˜ì˜¤ë‚˜ë´
-				System.out.println("ì¤‘ê°„ ê°’ì€ " + num2);
+				mean = num2; // À½ ÀÌ ¾È¿¡¼­ ÃÊ±âÈ­µÈ º¯¼ö´Â ¹ÛÀ¸·Î ¸ø³ª¿À³ªºÁ
+				System.out.println("Áß°£ °ªÀº " + num2);
 				break;
 			} else if ((num2 < num1) && num2 < num3) {
 				if (num1 < num3) {
-					mean = num1; // ìŒ ì´ ì•ˆì—ì„œ ì´ˆê¸°í™”ëœ ë³€ìˆ˜ëŠ” ë°–ìœ¼ë¡œ ëª»ë‚˜ì˜¤ë‚˜ë´
-					System.out.println("ì¤‘ê°„ ê°’ì€ " + num1);
+					mean = num1; // À½ ÀÌ ¾È¿¡¼­ ÃÊ±âÈ­µÈ º¯¼ö´Â ¹ÛÀ¸·Î ¸ø³ª¿À³ªºÁ
+					System.out.println("Áß°£ °ªÀº " + num1);
 					break;
 				} else if (num1 > num3) {
-					mean = num3; // ìŒ ì´ ì•ˆì—ì„œ ì´ˆê¸°í™”ëœ ë³€ìˆ˜ëŠ” ë°–ìœ¼ë¡œ ëª»ë‚˜ì˜¤ë‚˜ë´
-					System.out.println("ì¤‘ê°„ ê°’ì€ " + num3);
+					mean = num3; // À½ ÀÌ ¾È¿¡¼­ ÃÊ±âÈ­µÈ º¯¼ö´Â ¹ÛÀ¸·Î ¸ø³ª¿À³ªºÁ
+					System.out.println("Áß°£ °ªÀº " + num3);
 					break;
 				}
 			}
@@ -105,12 +111,12 @@ int mean;
 		
 	
 	
-	// ì‹¤ì „ë¬¸ì œ 5ë²ˆ
-	// ë­”ê°€ ë” ì‹¬í”Œí•˜ê³  ì•„ë¦„ë‹¤ìš´ ë°©ë²•ì´ ìˆì„ ê²ƒ ê°™ì€ ëŠë‚Œì´ ë“ ë‹¤
+	// ½ÇÀü¹®Á¦ 5¹ø
+	// ¹º°¡ ´õ ½ÉÇÃÇÏ°í ¾Æ¸§´Ù¿î ¹æ¹ıÀÌ ÀÖÀ» °Í °°Àº ´À³¦ÀÌ µç´Ù
 
 	public void validateTri() {
 		int leg1, leg2, leg3, leg12, leg23, leg31;
-		System.out.print("ì‚¼ê°í˜•ì˜ ê° ë³€ì˜ ê¸¸ì´ì¸ ì •ìˆ˜ 3ê°œë¥¼ ì…ë ¥í•˜ì‹œì˜¤ >> ");
+		System.out.print("»ï°¢ÇüÀÇ °¢ º¯ÀÇ ±æÀÌÀÎ Á¤¼ö 3°³¸¦ ÀÔ·ÂÇÏ½Ã¿À >> ");
 		leg1 = scan5.nextInt();
 		leg2 = scan5.nextInt();
 		leg3 = scan5.nextInt();
@@ -119,84 +125,88 @@ int mean;
 		leg31 = leg3 + leg1;
 
 		if ((leg12 > leg3) && (leg23 > leg1) && (leg31 > leg2)) {
-			System.out.println("ì‚¼ê°í˜•ì´ ë©ë‹ˆë‹¤");
+			System.out.println("»ï°¢ÇüÀÌ µË´Ï´Ù");
 		} else {
-			System.out.println("ê¸€ì„... ë­˜ê¹Œ? ìˆ˜í•™ê³µë¶€í•˜ì ì½”ë”ë¡œ ë‚¨ê¸° ì‹«ìœ¼ë©´");
+			System.out.println("±Û½ê... ¹»±î? ¼öÇĞ°øºÎÇÏÀÚ ÄÚ´õ·Î ³²±â ½ÈÀ¸¸é");
 		}
 	}
 
 	
-	// ì‹¤ì „ë¬¸ì œ 6ë²ˆ
-	// 3ì˜ ë°°ìˆ˜ë§Œ êµ¬í•˜ëŠ” ë¬¸ì œê°€ ì•„ë‹˜....
+	// ½ÇÀü¹®Á¦ 6¹ø
+	// 3ÀÇ ¹è¼ö¸¸ ±¸ÇÏ´Â ¹®Á¦°¡ ¾Æ´Ô....
 	public void game369() {
-		// ì‹­ì˜ ìë¦¬ì˜ ìˆ«ì êµ¬í•˜ëŠ” ë°©ë²• : xy / 10 => x
-		// ì¼ì˜ ìë¦¬ì˜ ìˆ«ì êµ¬í•˜ëŠ” ë°©ë²• : xy % 10 => y
-		// xê°€ 3ì˜ ë°°ìˆ˜(369)ì¸ì§€ í™•ì¸í•˜ëŠ” ë°©ë²• => x % 3 == 0
-		// yê°€ 3ì˜ ë°°ìˆ˜(369)ì¸ì§€ í™•ì¸í•˜ëŠ” ë°©ë²• => y % 3 == 0
-		// ê·¸ëŸ°ë° (0%3)ë„ 0ì´ì§€..... 10ì—ì„œ ë°•ìˆ˜ì³ê°€ ë‚˜ì˜¤ë©´ ì•ˆë¨
-		// ë”°ë¼ì„œ ë‘ìë¦¬ ìˆ˜ì¸ì§€ í•œìë¦¬ ìˆ˜ì¸ì§€ ì •í™•í•˜ê²Œ ê·œì •í•´ì£¼ì
-		// (x!=0)&&(y!=0) ë‘ìë¦¬ ìˆ˜ ì´ë©´ì„œ 0 ì—†ìŒ (ì‹­ì˜ ìë¦¬ ë‹¹ì—°) ì¼ì˜ ìë¦¬ 0ì¸ ì• ëŠ” elseë¡œ ë¹ ì§€ê² ì§€
-		// (x==0)&&(y!=0) í•œìë¦¬ ìˆ˜ì´ë©´ì„œ ì¼ì˜ ìë¦¬ê°€ 0ì€ ì•„ë‹Œì• ë“¤. 0ì€ elseë¡œ ë¹ ì§
+		// ½ÊÀÇ ÀÚ¸®ÀÇ ¼ıÀÚ ±¸ÇÏ´Â ¹æ¹ı : xy / 10 => x
+		// ÀÏÀÇ ÀÚ¸®ÀÇ ¼ıÀÚ ±¸ÇÏ´Â ¹æ¹ı : xy % 10 => y
+		// x°¡ 3ÀÇ ¹è¼ö(369)ÀÎÁö È®ÀÎÇÏ´Â ¹æ¹ı => x % 3 == 0
+		// y°¡ 3ÀÇ ¹è¼ö(369)ÀÎÁö È®ÀÎÇÏ´Â ¹æ¹ı => y % 3 == 0
+		// ±×·±µ¥ (0%3)µµ 0ÀÌÁö..... 10¿¡¼­ ¹Ú¼öÃÄ°¡ ³ª¿À¸é ¾ÈµÊ 3ÀÇ ¹è¼ö¶ó´Â°Ç ´ç¿¬È÷ 0Àº ¾Æ´Ò¶§ ¾ê±â
+		// µû¶ó¼­ µÎÀÚ¸® ¼öÀÎÁö ÇÑÀÚ¸® ¼öÀÎÁö Á¤È®ÇÏ°Ô ±ÔÁ¤ÇØÁÖÀÚ
+		// (x!=0)&&(y!=0) µÎÀÚ¸® ¼ö ÀÌ¸é¼­ 0 ¾øÀ½ (½ÊÀÇ ÀÚ¸® ´ç¿¬) ÀÏÀÇ ÀÚ¸® 0ÀÎ ¾Ö´Â else·Î ºüÁö°ÚÁö
+		// (x==0)&&(y!=0) ÇÑÀÚ¸® ¼öÀÌ¸é¼­ ÀÏÀÇ ÀÚ¸®°¡ 0Àº ¾Æ´Ñ¾Öµé. 0Àº else·Î ºüÁü
 
-		System.out.print("1~99 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ >> ");
+		System.out.print("1~99 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À >> ");
 		int num = scan6.nextInt();
-		// ì‹­ì˜ ìë¦¬ì˜ ìˆ˜
-		int x = num / 10;
-		// ì¼ì˜ ìë¦¬ì˜ ìˆ˜
-		int y = num % 10;
+		while (num < 1 || num > 99) {
+			System.out.println("¹üÀ§ ¹ÛÀÇ ¼ö¾ß. ´Ù½Ã ÀÔ·ÂÇØ");
+			System.out.print("1~99 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À >> ");
+			 num = scan6.nextInt();
+		}
+		
+		int x = num / 10; // ½ÊÀÇ ÀÚ¸®ÀÇ ¼ö
+		int y = num % 10; // ÀÏÀÇ ÀÚ¸®ÀÇ ¼ö
 
-		if ((x != 0) && (y != 0) && (x % 3 == 0) && (y % 3 == 0)) { // ë‘ìë¦¬ ì´ë©´ì„œ, ë‘ ìë¦¬ ëª¨ë‘ 369ì¤‘ í•˜ë‚˜ì— í•´ë‹¹
-			System.out.println("ë°•ìˆ˜ì§ì§");
-		} else if ((x == 0) && (y != 0) && (x % 3 != 0) && (y % 3 == 0)) { // ì‹­ì˜ ìë¦¬ëŠ” 0ì´ê³ , ì¼ì˜ ìë¦¬ 3 6 9 ì„¸ ê°œë§Œ í•´ë‹¹
-			System.out.println("ë°•ìˆ˜ì§");
-		} else if ((x != 0) && (y != 0) && (x % 3 == 0) && (y % 3 != 0)) { // ë‘ ìë¦¿ìˆ˜ ì´ë©´ì„œ ì‹­ì˜ ìë¦¬ë§Œ 369.
-			System.out.println("ë°•ìˆ˜ì§"); // ì•½ê°„ ê³¼ë„í•˜ê²Œ ì¡°ê±´ ê±¸ì€ ê²ƒ ì²˜ëŸ¼ ë³´ì´ë‚˜, ì˜¤ë¥˜ë³´ë‹¤ëŠ” ë‚«ì§€.
-		} else if ((x != 0) && (y != 0) && (x % 3 != 0) && (y % 3 == 0)) { // ë‘ ìë¦¬ ìˆ˜ì´ë©´ì„œ ì¼ì˜ ìë¦¬ë§Œ 369
-			System.out.println("ë°•ìˆ˜ì§");
+		if ((x != 0) && (y != 0) && (x % 3 == 0) && (y % 3 == 0)) { // µÎÀÚ¸® ÀÌ¸é¼­, µÎ ÀÚ¸® ¸ğµÎ 369Áß ÇÏ³ª¿¡ ÇØ´ç
+			System.out.println("¹Ú¼öÂ¦Â¦");
+		} else if ((x == 0) &&  (x % 3 != 0) && (y % 3 == 0)) { // ½ÊÀÇ ÀÚ¸®´Â 0ÀÌ°í, ÀÏÀÇ ÀÚ¸® 3 6 9 ¼¼ °³¸¸ ÇØ´ç
+			System.out.println("¹Ú¼öÂ¦");  // while·Î 0ÀÌ ¸øµé¿À¾î°Ô ¸·¾ÒÀ¸´Ï y!=0 ÀÌ¶ó´Â Á¶°ÇÀ» ±»ÀÌ ÇØÁÙ ÇÊ¿ä°¡ ¾øÁö
+		} else if ((x != 0) && (y != 0) && (x % 3 == 0) && (y % 3 != 0)) { // µÎ ÀÚ¸´¼ö ÀÌ¸é¼­ ½ÊÀÇ ÀÚ¸®¸¸ 369.
+			System.out.println("¹Ú¼öÂ¦"); // ¾à°£ °úµµÇÏ°Ô Á¶°Ç °ÉÀº °Í Ã³·³ º¸ÀÌ³ª, ¿À·ùº¸´Ù´Â ³´Áö.
+		} else if ((x != 0) && (y != 0) && (x % 3 != 0) && (y % 3 == 0)) { // µÎ ÀÚ¸® ¼öÀÌ¸é¼­ ÀÏÀÇ ÀÚ¸®¸¸ 369
+			System.out.println("¹Ú¼öÂ¦");
 		} else {
-			System.out.println("ë¹µ");
+			System.out.println("»§");
 		}
 
-	}// game369() ì¢…ë£Œ
+	}// game369() Á¾·á
 	
 	
 	
-	// ì‹¤ì „ë¬¸ì œ 7ë²ˆ
+	// ½ÇÀü¹®Á¦ 7¹ø
 
 	public void inRect() {
-		System.out.print("ì  (x,y)ì˜ ì¢Œí‘œë¥¼ ì…ë ¥í•˜ì‹œì˜¤ >> ");
+		System.out.print("Á¡ (x,y)ÀÇ ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ½Ã¿À >> ");
 		int x = scan7.nextInt();
 		int y = scan7.nextInt();
 
 		if (100 <= x && x <= 200) {
 			if (100 <= y && y <= 200) {
-				System.out.printf("(%d,%d)ëŠ” ì‚¬ê°í˜• ì•ˆì— ìˆìŠµë‹ˆë‹¤", x, y);
+				System.out.printf("(%d,%d)´Â »ç°¢Çü ¾È¿¡ ÀÖ½À´Ï´Ù", x, y);
 			} else {
-				System.out.printf("(%d,%d)ëŠ” ì‚¬ê°í˜• ë°–ì— ìˆìŠµë‹ˆë‹¤", x, y);
+				System.out.printf("(%d,%d)´Â »ç°¢Çü ¹Û¿¡ ÀÖ½À´Ï´Ù", x, y);
 			}
 		} else {
-			System.out.printf("(%d,%d)ëŠ” ì‚¬ê°í˜• ë°–ì— ìˆìŠµë‹ˆë‹¤", x, y);
+			System.out.printf("(%d,%d)´Â »ç°¢Çü ¹Û¿¡ ÀÖ½À´Ï´Ù", x, y);
 		}
 
 	} // validateRec end
 		
 	
 	
-	// ì‹¤ì „ë¬¸ì œ 8ë²ˆ
+	// ½ÇÀü¹®Á¦ 8¹ø
 
-	// (x1,y1) (x2,y2) ë¼ëŠ” ì§ì‚¬ê°í˜•ê³¼ (100, 100)
-	// (200,200)ì´ë¼ëŠ” ì§ì‚¬ê°í˜•ì´
-	// ì„œë¡œ ì¶©ëŒí•˜ëŠ” ì§€ í™•ì¸í•˜ëŠ” í”„ë¡œê·¸ë¨ì¸ë“¯
-	// xì¶• ìƒì—ì„œëŠ” ì™„ì „ ë™ì¼í•œ ì¢Œí‘œì— yì¶• ì¢Œí‘œê°€ ê²¹ì¹˜ì§€ ì•Šìœ¼ë©´ ì „í˜€ ì¶©ëŒ x
-	// ë§ˆì°¬ê°€ì§€ë¡œ yì¶• ì¢Œí‘œê°€ ìˆì–´ë„ xì¶•ì´ ì „í˜€ ë‹¤ë¥´ë©´ ë¬¸ì œ x
-	// ì™€ ìˆ˜í•™ì  ì‚¬ê³  ë§ì´ í•„ìš”í•˜ë„¤. ì´ê±° ê°œë°œì„ ìœ„í•œ ì˜ˆí–‰ì—°ìŠµì´ í™•ì‹¤í•˜ë„¤. ê·¸ë˜ì„œ ì‹¤ì „ì¸ê°€
+	// (x1,y1) (x2,y2) ¶ó´Â Á÷»ç°¢Çü°ú (100, 100)
+	// (200,200)ÀÌ¶ó´Â Á÷»ç°¢ÇüÀÌ
+	// ¼­·Î Ãæµ¹ÇÏ´Â Áö È®ÀÎÇÏ´Â ÇÁ·Î±×·¥ÀÎµí
+	// xÃà »ó¿¡¼­´Â ¿ÏÀü µ¿ÀÏÇÑ ÁÂÇ¥¿¡ yÃà ÁÂÇ¥°¡ °ãÄ¡Áö ¾ÊÀ¸¸é ÀüÇô Ãæµ¹ x
+	// ¸¶Âù°¡Áö·Î yÃà ÁÂÇ¥°¡ ÀÖ¾îµµ xÃàÀÌ ÀüÇô ´Ù¸£¸é ¹®Á¦ x
+	// ¿Í ¼öÇĞÀû »ç°í ¸¹ÀÌ ÇÊ¿äÇÏ³×. ÀÌ°Å °³¹ßÀ» À§ÇÑ ¿¹Çà¿¬½ÀÀÌ È®½ÇÇÏ³×. ±×·¡¼­ ½ÇÀüÀÎ°¡
 	public boolean crashRect() {
 		int x1, y1, x2, y2;
-		System.out.print("ì²« ë²ˆì§¸ ì (x1,y1)ì˜ ì¢Œí‘œë¥¼ ì…ë ¥í•˜ì‹œì˜¤");
+		System.out.print("Ã¹ ¹øÂ° Á¡(x1,y1)ÀÇ ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ½Ã¿À");
 		x1 = scan7.nextInt();
 		y1 = scan7.nextInt();
 
-		System.out.print("ë‘ ë²ˆì§¸ ì (x2,y2)ì˜ ì¢Œí‘œë¥¼ ì…ë ¥í•˜ì‹œì˜¤");
+		System.out.print("µÎ ¹øÂ° Á¡(x2,y2)ÀÇ ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ½Ã¿À");
 		x2 = scan7.nextInt();
 		y2 = scan7.nextInt();
 
@@ -209,164 +219,164 @@ int mean;
 
 	}
 
-	// ì‹¤ì „ë¬¸ì œ 9ë²ˆ
+	// ½ÇÀü¹®Á¦ 9¹ø
 	public void inCir() {
 		double cx, cy, x, y, r, xcxPow, ycyPow, dPow;
 		float d;
 
-		System.out.print("ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ì…ë ¥ >> ");
+		System.out.print("¿øÀÇ Áß½É°ú ¹İÁö¸§ ÀÔ·Â >> ");
 		cx = scan9.nextDouble();
 		cy = scan9.nextDouble();
 		r = scan9.nextDouble();
 
-		System.out.print("ì  ì…ë ¥ >> ");
+		System.out.print("Á¡ ÀÔ·Â >> ");
 		x = scan9.nextDouble();
 		y = scan9.nextDouble();
 
-		// ì¤‘ì‹¬ê³¼ ì (x,y)ì‚¬ì´ì˜ ê±°ë¦¬ê°€ ë°˜ì§€ë¦„ rë³´ë‹¤ ì‘ìœ¼ë©´ ì•ˆì— ìˆëŠ”ê±°ë˜!!
-		// ì›ì˜ ì¤‘ì‹¬ê³¼ ì (x,y)ì‚¬ì´ì˜ ê±°ë¦¬ëŠ” í”¼íƒ€ê³ ë¼ìŠ¤ ì •ë¦¬ ì¨ë¨¹ì–´ì•¼ì§€
-		// ì œê³± ë° ì œê³±ê·¼ êµ¬í•˜ëŠ” ë©”ì†Œë“œ ì˜¤ëŠ˜ ë‘˜ ë‹¤ ì²¨ ì¨ë³´ëŠ”êµ¬ë‚˜!!
+		// Áß½É°ú Á¡(x,y)»çÀÌÀÇ °Å¸®°¡ ¹İÁö¸§ rº¸´Ù ÀÛÀ¸¸é ¾È¿¡ ÀÖ´Â°Å·¡!!
+		// ¿øÀÇ Áß½É°ú Á¡(x,y)»çÀÌÀÇ °Å¸®´Â ÇÇÅ¸°í¶ó½º Á¤¸® ½á¸Ô¾î¾ßÁö
+		// Á¦°ö ¹× Á¦°ö±Ù ±¸ÇÏ´Â ¸Ş¼Òµå ¿À´Ã µÑ ´Ù Ã· ½áº¸´Â±¸³ª!!
 
-		xcxPow = Math.pow((x - cx), 2); // xì¶• ë‘ ì  ì‚¬ì´ì˜ ê±°ë¦¬ì˜ ì œê³±
+		xcxPow = Math.pow((x - cx), 2); // xÃà µÎ Á¡ »çÀÌÀÇ °Å¸®ÀÇ Á¦°ö
 		System.out.println(xcxPow);
 
-		ycyPow = Math.pow((y - cy), 2); // yì¶• ë‘ ì  ì‚¬ì´ì˜ ê±°ë¦¬ì˜ ì œê³±
+		ycyPow = Math.pow((y - cy), 2); // yÃà µÎ Á¡ »çÀÌÀÇ °Å¸®ÀÇ Á¦°ö
 		System.out.println(ycyPow);
 
 		dPow = xcxPow + ycyPow;
-		d = (float) Math.sqrt(dPow); // ë‘ ì  ì‚¬ì´ì˜ ê±°ë¦¬
+		d = (float) Math.sqrt(dPow); // µÎ Á¡ »çÀÌÀÇ °Å¸®
 		System.out.println(d);
 
 		if (d <= r) {
-			System.out.printf("ì (" + x + ", " + y + ")ëŠ” ì› ì•ˆì— ìˆë‹¤."); // printf í¬ë©§ ë•Œë¬¸ì— ì˜¤ë¥˜ ë‚˜ëŠ”ë° ê·€ì°®ì•„ì„œ ìƒëµ
+			System.out.printf("Á¡(" + x + ", " + y + ")´Â ¿ø ¾È¿¡ ÀÖ´Ù."); // printf Æ÷¸ä ¶§¹®¿¡ ¿À·ù ³ª´Âµ¥ ±ÍÂú¾Æ¼­ »ı·«
 		} else {
-			System.out.println("ì› ë°–ì´ì—ìš”");
+			System.out.println("¿ø ¹ÛÀÌ¿¡¿ä");
 		}
 	} // inCir() end
 
 	
-	// ì‹¤ì „ë¬¸ì œ 10ë²ˆ
-	// ë‘ ì›ì˜ ì¤‘ì‹¬ ì‚¬ì´ì˜ ê±°ë¦¬ê°€ ë‘ ì›ì˜ ë°˜ì§€ë¦„ì˜ í•©ë³´ë‹¤ í¬ë©´ ì„œë¡œ ê²¹ì¹˜ì§€ ì•ŠëŠ”ê±°ì§€
+	// ½ÇÀü¹®Á¦ 10¹ø
+	// µÎ ¿øÀÇ Áß½É »çÀÌÀÇ °Å¸®°¡ µÎ ¿øÀÇ ¹İÁö¸§ÀÇ ÇÕº¸´Ù Å©¸é ¼­·Î °ãÄ¡Áö ¾Ê´Â°ÅÁö
 	public void crashCir() {
 		double x1, y1, x2, y2, r1, r2, r3, x2x1Pow, y2y1Pow, dPow;
 		float d;
 
-		System.out.print("ì²« ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ì…ë ¥ >>");
+		System.out.print("Ã¹ ¹øÂ° ¿øÀÇ Áß½É°ú ¹İÁö¸§ ÀÔ·Â >>");
 		x1 = scan10.nextDouble();
 		y1 = scan10.nextDouble();
 		r1 = scan10.nextDouble();
-		System.out.print("ë‘ ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ì…ë ¥ >>");
+		System.out.print("µÎ ¹øÂ° ¿øÀÇ Áß½É°ú ¹İÁö¸§ ÀÔ·Â >>");
 		x2 = scan10.nextDouble();
 		y2 = scan10.nextDouble();
 		r2 = scan10.nextDouble();
 
-		// ê±°ë¦¬ ë¹„êµ
+		// °Å¸® ºñ±³
 		x2x1Pow = Math.pow(x2 - x1, 2);
 		y2y1Pow = Math.pow(y2 - y1, 2);
 		dPow = x2x1Pow + y2y1Pow;
-		d = (float) Math.sqrt(dPow); // ë‘ ì› ì‚¬ì´ì˜ ê±°ë¦¬
-		r3 = r1 + r2; // ë‘ ì›ì˜ ë°˜ì§€ë¦„ì˜ í•©
+		d = (float) Math.sqrt(dPow); // µÎ ¿ø »çÀÌÀÇ °Å¸®
+		r3 = r1 + r2; // µÎ ¿øÀÇ ¹İÁö¸§ÀÇ ÇÕ
 
 		if (d <= r3) {
-			System.out.println("ë‘ ì›ì€ ì„œë¡œ ê²¹ì¹œë‹¤");
+			System.out.println("µÎ ¿øÀº ¼­·Î °ãÄ£´Ù");
 		} else {
-			System.out.println("ì•ˆê²¹ì¹¨. ë‚¨ë‚¨ì„");
+			System.out.println("¾È°ãÄ§. ³²³²ÀÓ");
 		}
 
 	} // crashCir end
 
-	// ì‹¤ì „ë¬¸ì œ 11-1ë²ˆ
+	// ½ÇÀü¹®Á¦ 11-1¹ø
 	public void seasonMonthIf() {
-		System.out.print("ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš”(1~12) >> ");
+		System.out.print("´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä(1~12) >> ");
 		int input = scan11.nextInt();
 
 		if (3 <= input && input <= 5) {
-			System.out.println("ë´„");
+			System.out.println("º½");
 		} else if (6 <= input && input <= 8) {
-			System.out.println("ì—¬ë¦„");
+			System.out.println("¿©¸§");
 		} else if (9 <= input && input <= 11) {
-			System.out.println("ê°€ì„");
+			System.out.println("°¡À»");
 		} else if ((input == 12) || (input == 1) || (input == 2)) {
-			System.out.println("ê²¨ìš¸");
+			System.out.println("°Ü¿ï");
 		} else {
-			System.out.println("ì˜ëª»ì…ë ¥");
+			System.out.println("Àß¸øÀÔ·Â");
 		}
 	} // seasonMonthIf() end
 		
 	
-	// ì‹¤ì „ë¬¸ì œ 11-2ë²ˆ
+	// ½ÇÀü¹®Á¦ 11-2¹ø
 
 	public void seasonMonthSwitch() {
-		System.out.print("ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš”(1~12) >> ");
+		System.out.print("´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä(1~12) >> ");
 		int input = scan11.nextInt();
 
 		switch (input) {
 		case 3: case 4: case 5:
-			System.out.println("ë´„"); break;
+			System.out.println("º½"); break;
 		case 6: case 7: case 8:
-			System.out.println("ì—¬ë¦„"); break;
+			System.out.println("¿©¸§"); break;
 		case 9: case 10: case 11:
-			System.out.println("ê°€ì„"); 	break;
+			System.out.println("°¡À»"); 	break;
 		case 12: case 1: case 2:
-			System.out.println("ê²¨ìš¸"); 	break;
+			System.out.println("°Ü¿ï"); 	break;
 		default:
-			System.out.println("ì˜ëª»ì…ë ¥"); break;
+			System.out.println("Àß¸øÀÔ·Â"); break;
 		}
 	} // seasonMonthSwitch() end
 
-	// ì‹¤ì „ë¬¸ì œ 12ë²ˆ -1
+	// ½ÇÀü¹®Á¦ 12¹ø -1
 	public void operationsIf() {
 		double num1, num2;
 		String operator;
 
-		System.out.print("ì—°ì‚°>> ");
+		System.out.print("¿¬»ê>> ");
 		num1 = scan12.nextInt();
 		operator = scan12.next();
 		num2 = scan12.nextInt();
 
 		if (operator.equals("+")) {
-			System.out.printf("%f+%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 + num2));
+			System.out.printf("%f+%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 + num2));
 		} else if (operator.equals("-")) {
-			System.out.printf("%f-%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 - num2));
+			System.out.printf("%f-%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 - num2));
 		} else if (operator.equals("*")) {
-			System.out.printf("%f*%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 * num2));
+			System.out.printf("%f*%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 * num2));
 		} else if (operator.equals("/")) {
 			if (num2 == 0) {
-				System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤");
+				System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù");
 			} else
-				System.out.printf("%f/%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 / num2));
+				System.out.printf("%f/%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 / num2));
 		} else {
-			System.out.println("ì˜ëª» ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
+			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
 		}
 	}
 
-	// ì‹¤ì „ë¬¸ì œ 12ë²ˆ -2
+	// ½ÇÀü¹®Á¦ 12¹ø -2
 	public void operationsSwitch() {
 		double num1, num2;
 		String operator;
 
-		System.out.print("ì—°ì‚°>> ");
+		System.out.print("¿¬»ê>> ");
 		num1 = scan12.nextInt();
 		operator = scan12.next();
 		num2 = scan12.nextInt();
 
-		// switchëŠ” if elseë‘ ì•½ê°„ ë‹¤ë¥¸ë°©ì‹ìœ¼ë¡œ ì ‘ê·¼í•´ì•¼. ì—°êµ¬ í•„ìš”
-		switch (operator) { // switch expressionì€ doubleì„ ëª» ë°›ëŠ”êµ°...
+		// switch´Â if else¶û ¾à°£ ´Ù¸¥¹æ½ÄÀ¸·Î Á¢±ÙÇØ¾ß. ¿¬±¸ ÇÊ¿ä
+		switch (operator) { // switch expressionÀº doubleÀ» ¸ø ¹Ş´Â±º...
 		case "+": 
-			System.out.printf("%f+%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 + num2));
+			System.out.printf("%f+%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 + num2));
 			break;
 		case "-":
-			System.out.printf("%f-%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 - num2));
+			System.out.printf("%f-%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 - num2));
 			break;
 		case "*":
-			System.out.printf("%f*%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, (num1 * num2));
+			System.out.printf("%f*%fÀÇ °è»ê °á°ú´Â %f", num1, num2, (num1 * num2));
 			break;
 		case "/":
-			if(num2 == 0) { // ì—¬ê¸°ê°€ ì‚´ì§ ê³ ë¯¼
-			System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤");
+			if(num2 == 0) { // ¿©±â°¡ »ìÂ¦ °í¹Î
+			System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù");
 			break;
 			} else {
-				System.out.printf("%f/%fì˜ ê³„ì‚° ê²°ê³¼ëŠ” %f", num1, num2, ((num1 / num2)));
+				System.out.printf("%f/%fÀÇ °è»ê °á°ú´Â %f", num1, num2, ((num1 / num2)));
 				break;
 			}
 		default:
@@ -377,5 +387,4 @@ int mean;
 	public static void main(String[] args) {
 	new Practices();		
 	}
-	
 }
