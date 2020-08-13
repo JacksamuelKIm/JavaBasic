@@ -1,11 +1,13 @@
-// written on Aug 13 2020
-package homework2_2;
+package comstudy21.ch01;
+// ì²˜ìŒì—ëŠ” min - maxë¥¼ êµ¬í˜„ëª»í•¨;; ê·¸ëŒ€ì‹  UpAndDown2ì—ì„œ ArrayListë¥¼ í†µí•´ ì•„ë¦„ë‹µê²Œ êµ¬í˜„. 
+// ì´ í´ë˜ìŠ¤ ê³ ì¹˜ë‹¤ê°€ ê·¸ ê°™ì€ ì¢‹ì€ ì˜ê°ì´ ë– ì˜¤ë¦„
+// ê³ ì¹˜ê¸°ëŠ” í–ˆì§€ë§Œ ì•„ë¦„ë‹µì§€ ëª»í•˜ê³  ì¢€ ë³µì¡
 import java.util.Random;
 import java.util.Scanner;
 
 public class UpAndDown {
 	Scanner scan = new Scanner(System.in); 	Scanner scan2 = new Scanner(System.in);
-	Random r; 	int k; 	int input; 	String choice;	
+	Random r; 	int k, max, min, input; 	String choice;	
 	public UpAndDown() {
 	randomDraw();	
 	}	
@@ -13,50 +15,60 @@ public class UpAndDown {
 	private void randomDraw() {
 		r = new Random();
 		int k = r.nextInt(100);
+		min = 0;
+		max = 99;
+
 		choice = "";
-		
-		System.out.println("¼ö¸¦ °áÁ¤ÇÏ¿´½À´Ï´Ù. ¸ÂÃß¾î º¸¼¼¿ä.");
+
+		System.out.println("ìˆ˜ë¥¼ ê²°ì •í•˜ì˜€ìŠµë‹ˆë‹¤. ë§ì¶”ì–´ ë³´ì„¸ìš”.");
 		System.out.println("0-99");
+		System.out.print("1>>");
 		input = scan.nextInt();
-		
+
 		while (input != k) {
-			for(int i=1; ;i++) {
-			while (input < 0 || input > 99) {
-				System.out.println("¹öÀ§¿¡ ÇØ´çÇÏÁö ¾Ê´Â ¼öÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ê½Ã¿À");
-				System.out.print(">>");
-				input = scan.nextInt();
-			}
-			if (input < k) {
-				System.out.println("´õ ³ô°Ô");
-				System.out.print(i + ">>");
-				input = scan.nextInt(); // whileÀÇ expression¿¡ ÀÖÀ¸¹Ç·Î ÇÊ¿ä ¾øÀ½
-			} else if (input > k) {
-				System.out.println("´õ ³·°Ô");
-				System.out.print(i + ">>");
-				input = scan.nextInt();
-			}
-
-			if (input == k) {
-				System.out.println("¸Â¾Ò½À´Ï´Ù.");
-				System.out.print("´Ù½Ã ÇÏ½Ã°Ú½À´Ï±î?(y/n)>>>");
-				i = 0;
-				choice = scan2.nextLine();
-				while (!(choice.equals("y")) && !(choice.equals("n"))) {
-					System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À");
-					choice = scan2.nextLine();
-				} // choice while end
-
-				if (choice.equals("y")) {
-					System.out.println("¼ö¸¦ °áÁ¤ÇÏ¿´½À´Ï´Ù. ¸ÂÃß¾î º¸¼¼¿ä.");
-					System.out.println("0-99");
+			for (int i = 1;; i++) {
+				while (input < 0 || input > 99) {
+					System.out.println("ë²„ìœ„ì— í•´ë‹¹í•˜ì§€ ì•ŠëŠ” ìˆ˜ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤");
+					System.out.print(">>");
 					input = scan.nextInt();
-				} else if (choice.equals("n")) {
-					System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù. °¨»çÇÕ´Ï´Ù.");
-					break;
 				}
-			}	
-			
-			}//for end
+				if (input < k) {
+					System.out.println("ë” ë†’ê²Œ");
+					min = input + 1;
+					System.out.println(min + "-" + max);
+					System.out.print(i + 1+">>");
+					input = scan.nextInt();
+				} else if (input > k) {
+					System.out.println("ë” ë‚®ê²Œ");
+					max = input - 1;
+					System.out.println(min + "-" + max);
+					System.out.print(i + 1+">>");
+					input = scan.nextInt();
+				}
+
+				if (input == k) {
+					System.out.println("ë§ì•˜ìŠµë‹ˆë‹¤.");
+					System.out.print("ë‹¤ì‹œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)>>>");
+					i = 0;
+					choice = scan2.nextLine();
+					while (!(choice.equals("y")) && !(choice.equals("n"))) {
+						System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤");
+						choice = scan2.nextLine();
+					} // choice while end
+
+					if (choice.equals("y")) {
+						System.out.println("ìˆ˜ë¥¼ ê²°ì •í•˜ì˜€ìŠµë‹ˆ. ë§ì¶”ì–´ ë³´ì„¸ìš”.");
+						System.out.println("0-99");
+						System.out.println("1>>");
+
+						input = scan.nextInt();
+					} else if (choice.equals("n")) {
+						System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. ê°ì‚¬í•©ë‹ˆë‹¤.");
+						break;
+					}
+				}
+
+			} // for end
 		} // input while end
 	} // randonDraw() end
 
