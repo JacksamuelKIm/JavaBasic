@@ -33,6 +33,7 @@ public class Ch03Ex04 {
 		
 		// 2에서 9까지의 범위 이외의 숫자 걸러주는 유효성검사? 넣어주자
 		while(endDan <2 || endDan >9) {
+			System.out.println("범위 이외의 숫자입니다. 다시 입력해 주십시오");
 			System.out.print("종료 단을 입력해 주세요: ");
 			endDan = scan.nextInt();
 		}

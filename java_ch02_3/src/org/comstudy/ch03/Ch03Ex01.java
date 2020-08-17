@@ -9,18 +9,13 @@ public class Ch03Ex01 {
 		// odd3();
 		// test1();
 		// test1_SampleAnswer();
-		test2(); // 피보나치 수열
-		// test3();
+		// test2(); // 피보나치 수열
+		test3(); // 피보나치 수열 응용
 
 	}
 
 	private void test3() { // 피보나치 수열 응용 . 과제
 		// 1 + 1 - 2 + 3 - 5 + 8 - 13 + 21 = 14
-
-	}
-
-	private void test2() { // 피보나치 수열
-		// 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 = 54
 		int sum = 0;
 		int temp = 0, temp2 = 0;
 		int total = 0;
@@ -29,20 +24,52 @@ public class Ch03Ex01 {
 		num[0] = 0;
 
 		for (int i = 1; i <= size; i++) {
-			if(i==1) {
+			if (i == 1) {
 				num[i] = 1;
-				num[i+1] = num[i] + num[i-1];
+				num[i+1] = num[i] + num[i - 1];
 			}
-			num[i+2] = num[i] + num[i+1];			
-			if(i!=size){
+			num[i+2] = num[i] + num[i + 1];
+			if (i != size) {
+				
+			} else {
+				
+			}
+
+			if (i != 1 && i % 2 == 1) {
+				num[i] = - num[i];
+				System.out.print(num[i] + "-");
+			} else {
 				System.out.print(num[i] + "+");
-			}else {
-				System.out.print(num[i] + "=");
+			}
+
+			total = total + num[i];
+		}
+		System.out.println(total);
+	}
+
+	private void test2() { // 피보나치 수열
+		// (0 +) 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 = 54
+		int sum = 0;
+		int temp = 0, temp2 = 0;
+		int total = 0;
+		int size = 8;
+		int[] num = new int[size + 4];
+		num[0] = 0;
+
+		for (int i = 1; i <= size; i++) {
+			if (i == 1) {
+				num[i] = 1;
+				num[i + 1] = num[i] + num[i - 1];
+			}
+			num[i + 2] = num[i] + num[i + 1];
+			if (i != size) {
+				System.out.print(num[i] + " + ");
+			} else {
+				System.out.print(num[i] + " = ");
 			}
 			total = total + num[i];
-		}		
+		}
 		System.out.println(total);
-		
 
 	}
 
