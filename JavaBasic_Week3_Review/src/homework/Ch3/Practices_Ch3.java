@@ -373,8 +373,17 @@ public class Practices_Ch3 {
 
 
 	private void 실전문제13() {
-		// TODO Auto-generated method stub
-		
+		for (int i=1; i<100; i++) {
+			
+			//한자리수 369 해결
+			if(i<10 && (i%3==0)) {
+				System.out.println(i + " 박수 짝");
+			} else if (i>=10 && i%10!=0  && ((i/10)%3 == 0 || (i%10)%3 == 0) ) { 
+				// 십의 자리나 일의 자리가 369 
+				System.out.println(i + " 박수 짝");
+			}
+			// 10의 자리수에서 십의 자리의 수에 369 들어가는 애들 골라주기
+		}		
 	}
 
 
