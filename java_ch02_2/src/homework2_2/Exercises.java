@@ -29,11 +29,11 @@
 //	﻿int _i; 
 //	int %j; => %는 변수명으로 합당하지 않은 특수문자 
 //	char 안녕; 
-     => 잘못된 거 아님. 변수 이름이나까
+//     => 잘못된 거 아님. 변수 이름이나까
 //	double 1var; => 변수명 첫글자로 숫자 안됨 
 //	char student_ID; 
 //	final int abcdefghijklmnopqrstuvwxyz; 
-    		 => final이므로 초기값 주어야하고 대문자로 변수 이름 
+//    		 => final이므로 초기값 주어야하고 대문자로 변수 이름 
 	
 //	4.
 
@@ -53,7 +53,7 @@
 //	System.out.println(10/3); 
 //	
 //	(3) int y = 10/3; 3. 3.3333333333333335    
-   => 자바에서는 정수와 실수 계산하면 자동 실수로 변함
+//   => 자바에서는 정수와 실수 계산하면 자동 실수로 변함
 //	double System.out.println(10.0/3); double z = 10.0/3; 
 //
 //	(4) false boolean
@@ -71,7 +71,6 @@
 //
 //	(4) int score = 85; if(80 < score < 90) System.out.print(score); 
 //	===> int score = 85; if(80 < score || score < 90) System.out.print(score);
-	​
 
 //	8.
 //
@@ -84,32 +83,29 @@
 //	9.
 //
 //	﻿int result = (sum > 100) ? 100 : 0; // 삼항연산자 사용했으나 sum 두 개 중복은 어쩌란 건지 
-	=> 변수 다른거 써 
-	   삼항 연산자의 우선순위가 늦으므로 괄호 안해줘도 됨
-	
+//	=> 변수 다른거 써 
+//	   삼항 연산자의 우선순위가 늦으므로 괄호 안해줘도 됨
+//	
 	
 //	10. 
 //	﻿boolean (n>5) ? System.out.println(n) : System.out.println(5);
-	=>System.out.println((n>5) ? n : 5)
-//	
+//	=>System.out.println((n>5) ? n : 5)
+////	
 //	
 //	11.
 //	﻿String text = "\" 를 출력하려면 \\ 다음에 \" 를 붙여 \\\" 과 같이 하면 됩니다.";
 //	
 //	12.	
 //	나는 "Java를 100%"사랑해
-
-	​
-
 //	13.
-	=> switch문은 break가 없으면 다음 연산까지 누적시켜줌
+//	=> switch문은 break가 없으면 다음 연산까지 누적시켜줌
 //
 //	(1) 100
-	=> 190   A구하지만 아래까지 쫙 다 내려가서 답이 더해짐
+//	=> 190   A구하지만 아래까지 쫙 다 내려가서 답이 더해짐
 //	(2) 50
-	=>  90
+//	=>  90
 ///	(3) 30
-    => 40
+//    => 40
 //	(4) 0
 //
 //	​
@@ -130,10 +126,7 @@
 //		case PAPER : System.out.println(3); break;
 //			
 //		default : System.out.println(0); break;
-//		}
-	​
-
-	​
+//		}​
 
 	
-}
+//}

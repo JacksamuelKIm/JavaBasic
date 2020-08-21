@@ -1,0 +1,47 @@
+	8월 21일 2020년
+
+	Day 10 학습정리
+
+ 
+하나의 자바 파일에는 여러가지 클래스가 들어갈 수 있으나 public이 붙는 클래스는 단 하나	
+
+배열같은 경우는 같은 타입만 저장할 수 있으나
+
+클래스 선언하기 - 객체를 생성하기 위해서 클래스를 만든다
+클래스는 객체의 참조변수를 선언하는 타입이 된다.
+
+클래스로 만드는 객체에는 타입이 다른 것들도 저장될 수 있다. 
+
+People hong = new People(); //People이 타임이 되는 것임. hong은 참조변수(주소값). 클래스에 있는 필드가 heap에 저장되고, 식별자는 stack에
+배열과는 다르게 번호나 순서가 있는 것이 아니므로, hong.name 이렇게 점을 찍어서 그 안 자료 불러옴
+
+이클립스에서 오른쪽 마우스 버튼, source - toString하면 자동으로 만들어줌
+
+
+//저장된 데이터를 사용하기
+//		System.out.printf("&d\t&s\t&d\t ", hong.no, hong.name, hong.phone); //이거 귀찮으므로
+//		System.out.println(hong.toString()); // 이렇게 할 필요도 없다. 클래스 안에 toString이 포함되 있으므로 객체를 출력하면 자동 출력
+		System.out.println(hong);
+		
+People[] pArr = new People[5]; //이렇게하면 c에서는 객체가 5개 만들어지나 자바에서는 참조변수가 5개 만들어짐
+4바이트짜리 배열을 참조할 수 있는 참조변수와 그에 연결된 People 객체의 참조변수 5개가 stack에 만들어짐 만들어짐
+c는 절차지향적 언어
+		
+	
+	
+	Student s = new Student();
+		
+		System.out.print("이름을 입력하세요 >>> ");
+		s.setName(scan.next());
+		System.out.print("국어 성적을 입력하세요 >>> ");
+		s.setKor(scan.nextInt());
+		System.out.print("영어 성적을 입력하세요 >>> ");
+		s.setEng(scan.nextInt());
+		System.out.print("수학 성적을 입력하세요 >>> ");
+		s.setMath(scan.nextInt());
+		
+		s.setTotal(s.getKor() + s.getEng() + s.getMath());
+		
+		
+		return s;
+		
