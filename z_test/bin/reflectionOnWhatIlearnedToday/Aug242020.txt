@@ -1,0 +1,31 @@
+	Day 11 학습정리 / 8월 24일 2020년
+
+	
+1. 메소드 오버로딩 
+	- 매개변수의 타입과 갯구가 다르면 메소드명은 동일하게 사용가능!! (다형성  -  객체지향에서 매우 중요한 개념!)
+
+ 
+2. try catch블록 
+   
+   	1) 예전 시대에는 if else if문으로 처리했었다. 그냥 특별한 if else문이라고 생각하면 된다.	
+ 	
+ 	2) 예외는 에러는 아니지만, 런타임시 오류가 생길 수 있을 때 쓴다. 오류 클래스는 따로 있다.
+ 	nullpointException을 제일 많이 겪는다. 한 10000번쯤 nullPointException을 봐야 중급개발자가 된다는 말도 있음
+ 	Exception을 보고 고치려고 많이 시도할 때 실력이 는다. 문제없이 코딩이 되고 바로 바로 잘 작동하면 정작 실력이 거의 늘지 않는다.
+ 
+	3) 객체가 생성되지 않으면(Null) 당연히 접근 불가능. 그럴 때 NullpointException
+	String c = null; 
+		// 이름(참조변수, 주소값)만 있을 뿐 객체가 존재하지 않음
+		// NullPointException : 객체가 없기 때문에 멤버 접근 불가능!
+
+	4) Should be able to tell Exception from Error. They belong to different classes
+	
+	5) 예외가 발생할 것 같은 문장에 try로 감싸주고 catch에서 발생할 수 있는 예외를 적어주고, 발생시 수행할 작업을 작성!
+	Exception 상위 class를 아래쪽에 넣어준다
+	
+	6)	finally 블록은 예외가 발생하든 안하든 반드시 수행!
+	
+	7) throw는 사용자가 강제적으로 예외를 발생시킬 때 사용한다!
+	
+	8) 컴퓨터는 일반적으로 가까운 것부터 실행시킨다!
+	
